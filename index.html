@@ -65,7 +65,7 @@
         /* ===== Hero ===== */
         .hero {
             text-align: center;
-            padding: 40px 0 20px;
+            padding: 40px 0 10px;
         }
 
         .hero-avatar {
@@ -102,11 +102,32 @@
             border: 1px solid #2a3a6a;
         }
 
+        /* ===== 關於我（放在 Hero 下面） ===== */
+        .about {
+            background: #111533;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0 30px;
+            border: 1px solid #1a2a4a;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
         /* ===== 作品與下載 ===== */
         .section-title {
             font-size: 28px;
             text-align: center;
-            margin: 50px 0 12px;
+            margin: 40px 0 12px;
         }
 
         .section-sub {
@@ -187,30 +208,49 @@
             border-radius: 30px;
         }
 
-        /* ===== 關於我 ===== */
-        .about {
+        /* ===== 卡片區塊（我的網頁 + GitHub） ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0 40px;
+        }
+
+        .card-link {
             background: #111533;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-            border: 1px solid #1a2a4a;
+            border-radius: 16px;
+            padding: 30px 24px;
             text-align: center;
+            border: 1px solid #1a2a4a;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: all 0.3s ease;
         }
 
-        .about h2 {
-            font-size: 24px;
-            margin-bottom: 12px;
+        .card-link:hover {
+            transform: translateY(-4px);
+            border-color: #4a8aff;
         }
 
-        .about p {
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto;
+        .card-link .icon {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .card-link h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .card-link p {
+            color: #8ab4ff;
+            font-size: 14px;
         }
 
         /* ===== 聯絡 ===== */
         .contact {
-            margin-top: 50px;
+            margin-top: 30px;
             padding: 30px;
             background: #111533;
             border-radius: 20px;
@@ -274,6 +314,9 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -291,12 +334,21 @@
             </div>
         </nav>
 
-        <!-- ===== Hero 區塊（放到最上面） ===== -->
+        <!-- ===== Hero ===== -->
         <div class="hero">
             <img src="https://i.ibb.co/YFMfSfcy/willie.png" alt="Willie Zhang" class="hero-avatar">
             <h1>Willie Zhang</h1>
             <p class="subtitle">📸 攝影 · 💻 亂寫程式 · 🎵 音訊工具開發者</p>
             <div class="badge">✦ 基隆二信高中生 · 用 ❤️ 打造</div>
+        </div>
+
+        <!-- ===== 關於我（放在 Hero 下面，緊接在 badge 下方） ===== -->
+        <div id="about" class="about">
+            <h2>📖 關於我</h2>
+            <p>
+                今年 18 歲，目前就讀基隆二信高中。熱愛用鏡頭記錄生活、在影像剪輯中尋找樂趣，
+                同時也喜歡亂寫一些實用程式。LinkGrab、TurnDoc、AudioGrab、SonicPress 都是我突發奇想的作品。
+            </p>
         </div>
 
         <!-- ===== 作品與下載 ===== -->
@@ -339,25 +391,25 @@
 
         </div>
 
-        <!-- ===== 關於我 ===== -->
-        <div id="about" class="about">
-            <h2>📖 關於我</h2>
-            <p>
-                今年 18 歲，目前就讀基隆二信高中。熱愛用鏡頭記錄生活、在影像剪輯中尋找樂趣，
-                同時也喜歡亂寫一些實用程式。LinkGrab、TurnDoc、AudioGrab、SonicPress 都是我突發奇想的作品。
-            </p>
+        <!-- ===== 我的網頁 + GitHub 創作區（兩張卡片） ===== -->
+        <div class="card-grid">
+            <a href="https://zhangjunwei0626-1.onrender.com" target="_blank" class="card-link">
+                <span class="icon">🌐</span>
+                <h3>我的網頁</h3>
+                <p>攝影 · 遊戲 · 生活</p>
+            </a>
+            <a href="https://github.com/willie0712" target="_blank" class="card-link">
+                <span class="icon">💻</span>
+                <h3>GitHub 創作區</h3>
+                <p>所有開源專案都在這裡</p>
+            </a>
         </div>
 
-        <!-- ===== 聯絡（沒有「我的網站」連結） ===== -->
+        <!-- ===== 聯絡 ===== -->
         <div id="contact" class="contact">
             <h2 style="font-size:22px; margin-bottom:8px;">📬 聯絡我</h2>
             <p style="color:#aaa; margin-bottom:12px;">有任何問題或建議，歡迎來信</p>
             <a href="mailto:willie.develop467@gmail.com">willie.develop467@gmail.com</a>
-            <div class="social-links">
-                <a href="https://github.com/willie0712" target="_blank">GitHub</a>
-                <span>·</span>
-                <a href="https://willie0712.github.io/" target="_blank">我的網頁</a>
-            </div>
         </div>
 
         <!-- ===== Footer ===== -->
