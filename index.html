@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Willie Zhang · 攝影 · 遊戲 · 作品</title>
+    <title>Willie Zhang · 作品集</title>
     <style>
-        /* ===== 全域設定 ===== */
         * {
             margin: 0;
             padding: 0;
@@ -103,28 +102,7 @@
             border: 1px solid #2a3a6a;
         }
 
-        /* ===== 關於我 ===== */
-        .about {
-            background: #111533;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 0;
-            border: 1px solid #1a2a4a;
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        .about p {
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* ===== 作品與下載（合併版） ===== */
+        /* ===== 作品與下載 ===== */
         .section-title {
             font-size: 28px;
             text-align: center;
@@ -209,7 +187,28 @@
             border-radius: 30px;
         }
 
-        /* ===== 聯絡區塊 ===== */
+        /* ===== 關於我 ===== */
+        .about {
+            background: #111533;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid #1a2a4a;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .about p {
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===== 聯絡 ===== */
         .contact {
             margin-top: 50px;
             padding: 30px;
@@ -261,107 +260,111 @@
 
         /* ===== 響應式 ===== */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 28px; }
-            nav { flex-direction: column; align-items: flex-start; }
-            .nav-links { gap: 16px; flex-wrap: wrap; }
-            .projects-grid { grid-template-columns: 1fr; }
+            .hero h1 {
+                font-size: 28px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
 
-    <!-- ===== 導覽列 ===== -->
-    <nav>
-        <div class="nav-brand">◈ Willie Zhang</div>
-        <div class="nav-links">
-            <a href="#">首頁</a>
-            <a href="#projects">作品</a>
-            <a href="#about">關於</a>
-            <a href="#contact">聯絡</a>
+        <!-- ===== 導覽列 ===== -->
+        <nav>
+            <div class="nav-brand">◈ Willie Dev</div>
+            <div class="nav-links">
+                <a href="#">作品</a>
+                <a href="#">下載</a>
+                <a href="#about">關於</a>
+                <a href="#contact">聯絡</a>
+            </div>
+        </nav>
+
+        <!-- ===== Hero 區塊（放到最上面） ===== -->
+        <div class="hero">
+            <img src="https://i.ibb.co/YFMfSfcy/willie.png" alt="Willie Zhang" class="hero-avatar">
+            <h1>Willie Zhang</h1>
+            <p class="subtitle">📸 攝影 · 💻 亂寫程式 · 🎵 音訊工具開發者</p>
+            <div class="badge">✦ 基隆二信高中生 · 用 ❤️ 打造</div>
         </div>
-    </nav>
 
-    <!-- ===== Hero 區塊（回來了！） ===== -->
-    <div class="hero">
-        <img src="https://i.ibb.co/YFMfSfcy/willie.png" alt="Willie Zhang" class="hero-avatar">
-        <h1>Willie Zhang</h1>
-        <p class="subtitle">📸 攝影 · 🎮 遊戲 · 💻 亂寫程式</p>
-        <div class="badge">✦ 基隆二信高中生 · 用 ❤️ 打造</div>
+        <!-- ===== 作品與下載 ===== -->
+        <h2 class="section-title">🛠️ 作品與下載</h2>
+        <p class="section-sub">實用工具 · 開放原始碼 · 免費使用</p>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-icon">🎵</div>
+                <h3>AudioGrab</h3>
+                <div class="desc">MP4 轉 MP3 · 從影片抽出音樂</div>
+                <div class="version">v1.0.0</div>
+                <a href="https://drive.google.com/file/d/1aVgjhp5JKn305d7cyaw4t1ipY0vJ4bqU/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🔗</div>
+                <h3>LinkGrab</h3>
+                <div class="desc">連結擷取工具 · 批次下載</div>
+                <div class="version">v1.0.0</div>
+                <a href="https://drive.google.com/file/d/1U4q47GrX17GBY4rK--fCK0S-LiQ2Q-Ql/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">📄</div>
+                <h3>TurnDoc</h3>
+                <div class="desc">文件轉換工具 · 批次轉檔</div>
+                <div class="version">v1.0.2</div>
+                <a href="https://drive.google.com/file/d/1YVjMdpdzzuxEzyDTUuTqXW-82TVDgw0J/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🎛️</div>
+                <h3>SonicPress</h3>
+                <div class="desc">MP3 壓縮工具 · 節省空間</div>
+                <div class="version">v1.0.0</div>
+                <span class="btn-coming">🚀 開發中</span>
+            </div>
+
+        </div>
+
+        <!-- ===== 關於我 ===== -->
+        <div id="about" class="about">
+            <h2>📖 關於我</h2>
+            <p>
+                今年 18 歲，目前就讀基隆二信高中。熱愛用鏡頭記錄生活、在影像剪輯中尋找樂趣，
+                同時也喜歡亂寫一些實用程式。LinkGrab、TurnDoc、AudioGrab、SonicPress 都是我突發奇想的作品。
+            </p>
+        </div>
+
+        <!-- ===== 聯絡（沒有「我的網站」連結） ===== -->
+        <div id="contact" class="contact">
+            <h2 style="font-size:22px; margin-bottom:8px;">📬 聯絡我</h2>
+            <p style="color:#aaa; margin-bottom:12px;">有任何問題或建議，歡迎來信</p>
+            <a href="mailto:willie.develop467@gmail.com">willie.develop467@gmail.com</a>
+            <div class="social-links">
+                <a href="https://github.com/willie0712" target="_blank">GitHub</a>
+                <span>·</span>
+                <a href="https://willie0712.github.io/" target="_blank">我的網頁</a>
+            </div>
+        </div>
+
+        <!-- ===== Footer ===== -->
+        <footer>
+            © 2026 Willie Zhang · 基隆二信高中生 · 用 ❤️ 打造
+        </footer>
+
     </div>
-
-    <!-- ===== 關於我 ===== -->
-    <div id="about" class="about">
-        <h2>📖 關於我</h2>
-        <p>
-            今年 18 歲，目前就讀基隆二信高中。熱愛用鏡頭記錄生活、在影像剪輯中尋找樂趣，
-            同時也喜歡亂寫一些實用程式。LinkGrab、TurnDoc、AudioGrab、SonicPress 都是我突發奇想的作品。
-        </p>
-    </div>
-
-    <!-- ===== 作品與下載（合併版） ===== -->
-    <h2 id="projects" class="section-title">🛠️ 作品與下載</h2>
-    <p class="section-sub">實用工具 · 開放原始碼 · 免費使用</p>
-
-    <div class="projects-grid">
-
-        <!-- AudioGrab -->
-        <div class="project-card">
-            <div class="project-icon">🎵</div>
-            <h3>AudioGrab</h3>
-            <div class="desc">MP4 轉 MP3 · 從影片抽出音樂</div>
-            <div class="version">v1.0.0</div>
-            <a href="https://drive.google.com/file/d/1aVgjhp5JKn305d7cyaw4t1ipY0vJ4bqU/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
-        </div>
-
-        <!-- LinkGrab -->
-        <div class="project-card">
-            <div class="project-icon">🔗</div>
-            <h3>LinkGrab</h3>
-            <div class="desc">連結擷取工具 · 批次下載</div>
-            <div class="version">v1.0.0</div>
-            <a href="https://drive.google.com/file/d/1U4q47GrX17GBY4rK--fCK0S-LiQ2Q-Ql/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
-        </div>
-
-        <!-- TurnDoc -->
-        <div class="project-card">
-            <div class="project-icon">📄</div>
-            <h3>TurnDoc</h3>
-            <div class="desc">文件轉換工具 · 批次轉檔</div>
-            <div class="version">v1.0.2</div>
-            <a href="https://drive.google.com/file/d/1YVjMdpdzzuxEzyDTUuTqXW-82TVDgw0J/view?usp=drivesdk" target="_blank" class="btn-download">⬇ 下載</a>
-        </div>
-
-        <!-- SonicPress -->
-        <div class="project-card">
-            <div class="project-icon">🎛️</div>
-            <h3>SonicPress</h3>
-            <div class="desc">MP3 壓縮工具 · 節省空間</div>
-            <div class="version">v1.0.0</div>
-            <span class="btn-coming">🚀 開發中</span>
-        </div>
-
-    </div>
-
-    <!-- ===== 聯絡區塊 ===== -->
-    <div id="contact" class="contact">
-        <h2 style="font-size:22px; margin-bottom:8px;">📬 聯絡我</h2>
-        <p style="color:#aaa; margin-bottom:12px;">有任何問題或建議，歡迎來信</p>
-        <a href="mailto:willie.develop467@gmail.com">willie.develop467@gmail.com</a>
-        <div class="social-links">
-            <a href="https://github.com/willie0712" target="_blank">GitHub</a>
-            <span>·</span>
-            <a href="https://willie0712.github.io/" target="_blank">我的網頁</a>
-            <span>·</span>
-            <a href="https://zhangjunwei0626-1.onrender.com" target="_blank">Willie Zhang</a>
-        </div>
-    </div>
-
-    <!-- ===== Footer ===== -->
-    <footer>
-        © 2026 Willie Zhang · 基隆二信高中生 · 用 ❤️ 打造
-    </footer>
-
-</div>
 </body>
 </html>
