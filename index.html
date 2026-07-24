@@ -102,7 +102,7 @@
             border: 1px solid #2a3a6a;
         }
 
-        /* ===== 關於我（放在 Hero 下面） ===== */
+        /* ===== 關於我 ===== */
         .about {
             background: #111533;
             border-radius: 20px;
@@ -208,7 +208,7 @@
             border-radius: 30px;
         }
 
-        /* ===== 卡片區塊（我的網頁 + GitHub） ===== */
+        /* ===== 卡片區塊 ===== */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -268,26 +268,6 @@
             color: #8ab4ff;
         }
 
-        .contact .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .contact .social-links a {
-            font-size: 14px;
-            color: #8ab4ff;
-            text-decoration: none;
-        }
-
-        .contact .social-links a:hover {
-            color: #fff;
-        }
-
         /* ===== Footer ===== */
         footer {
             text-align: center;
@@ -336,13 +316,13 @@
 
         <!-- ===== Hero ===== -->
         <div class="hero">
-            <img src="https://i.ibb.co/YFMfSfcy/willie.png" alt="Willie Zhang" class="hero-avatar">
+            <img src="https://i.ibb.co/YFMfSfcy/willie.png" alt="Willie Zhang" class="hero-avatar" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Willie'">
             <h1>Willie Zhang</h1>
             <p class="subtitle">📸 攝影 · 💻 亂寫程式 · 🎵 音訊工具開發者</p>
             <div class="badge">✦ 基隆二信高中生 · 用 ❤️ 打造</div>
         </div>
 
-        <!-- ===== 關於我（放在 Hero 下面，緊接在 badge 下方） ===== -->
+        <!-- ===== 關於我 ===== -->
         <div id="about" class="about">
             <h2>📖 關於我</h2>
             <p>
@@ -391,7 +371,7 @@
 
         </div>
 
-        <!-- ===== 我的網頁 + GitHub 創作區（兩張卡片） ===== -->
+        <!-- ===== 我的網頁 + GitHub ===== -->
         <div class="card-grid">
             <a href="https://zhangjunwei0626-1.onrender.com" target="_blank" class="card-link">
                 <span class="icon">🌐</span>
